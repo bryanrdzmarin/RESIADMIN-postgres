@@ -17,21 +17,21 @@ La base de datos está implementada en **PostgreSQL** y el proyecto está prepar
    ```bash
    git clone https://github.com/naylanbarrera/gestion-de-residencias-ResiAdmin-PostgreSQL.git
    cd gestion-de-residencias-ResiAdmin-PostgreSQL
-
 2. **Levantar el proyecto:**
    ```bash
    docker compose up -d
-
 3. **Ejecutar migraciones y seed:**
    Una vez que los contenedores estén en ejecución, corre las migraciones y el seed:
-
+   ```bash
+   docker exec -it nombre_del_contenedor_app php artisan migrate
+   docker exec -it nombre_del_contenedor_app php artisan db:seed
 4. **Iniciar sesión:**
    Puedes acceder al sistema utilizando cualquiera de estas cuentas de prueba:
 
    **Usuario 1** 
       - Correo: `especialista@gmail.com` 
       - Contraseña: `12345678` 
-   
+      
    **Usuario 2** 
       - Correo: `esepcialista@gmail.com` 
       - Contraseña: `12345678`
