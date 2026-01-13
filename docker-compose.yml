@@ -1,0 +1,30 @@
+volumes:
+  cache_deps:
+  cache_deps_npm:
+services:
+  db:
+    image: postgres:17.6-alpine3.22
+    ports:
+      - 5423:5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+  
+  laravel:
+    build: .
+    env_file: .env
+    environment:
+      - DB_CONNECTION=${DB_CONNECTION}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_DATABASE=${DB_DATABASE}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - cache_deps:/app/vendor
+      - cache_deps_npm:/app/node_modules
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+      - 5173:5173

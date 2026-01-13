@@ -1,0 +1,26 @@
+# Gestión de Residencias - ResiAdmin (PostgreSQL + Docker)
+
+Sistema de control de residencia estudiantil: gestión de apartamentos y becados (cubanos y extranjeros), evaluaciones y listados estadísticos.  
+La base de datos está implementada en **PostgreSQL** y el proyecto está preparado para ejecutarse en **Docker**.
+
+---
+
+## 🚀 Requisitos previos
+- Tener instalado [Docker](https://docs.docker.com/get-docker/)
+- Tener instalado [Docker Compose](https://docs.docker.com/compose/)
+
+---
+
+## ⚙️ Instalación y ejecución
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/naylanbarrera/gestion-de-residencias-ResiAdmin-PostgreSQL.git
+   cd gestion-de-residencias-ResiAdmin-PostgreSQL
+
+2. **Crear el archivo .env:**
+  Copia el archivo de ejemplo (.env.example) y ajusta las variables según tu configuración.
+
+3. **Levantar el proyecto:**
+   ```bash
+    docker compose up -d

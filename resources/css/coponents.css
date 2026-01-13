@@ -1,0 +1,58 @@
+.card{
+    @apply bg-white px-6 py-8 shadow-lg rounded-lg
+}
+
+button:disabled {
+    background-color: #6d8392; 
+    color: #FFFFFF; 
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}
+
+.flux-select {
+    @apply w-full px-4 py-2 pr-10 border rounded-lg bg-white text-gray-700 
+           focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] 
+           focus:border-[var(--color-accent)] appearance-none;
+}
+
+
+
+
+.custom-radio {
+    appearance: none; /* Oculta el estilo predeterminado */
+    width: 18px; /* Tamaño más pequeño */
+    height: 18px;
+    border-radius: 50%; /* Hace que el radio sea completamente redondo */
+    border: 2px solid var(--color-emerald-600); /* Verde personalizado */
+    background-color: white; /* Fondo blanco */
+    display: inline-block;
+    position: relative;
+    top: 3.5px; /* Ajusta este valor para bajarlo */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 4px;
+}
+
+/* Efecto cuando está seleccionado */
+.custom-radio:checked::before {
+    content: "";
+    width: 10px; /* Tamaño más pequeño del círculo interno */
+    height: 10px;
+    background-color: var(--color-emerald-600); /* Verde esmeralda */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Mejor separación entre labels */
+.flux-label {
+    margin-left: 3px; /* Espacio entre el radio y el texto */
+}
+
+html, body {
+    height: 100vh;
+    overflow: hidden; /* Evita que el navegador maneje el scroll */
+}
+
