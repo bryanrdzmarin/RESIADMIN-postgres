@@ -33,5 +33,5 @@ La base de datos está implementada en **PostgreSQL** y el proyecto está prepar
       - Contraseña: `12345678` 
       
    **Usuario 2** 
-      - Correo: `esepcialista@gmail.com` 
+      - Correo: `administrador@gmail.com` 
       - Contraseña: `12345678`
